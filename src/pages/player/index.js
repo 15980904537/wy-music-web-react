@@ -1,9 +1,11 @@
 import React, { memo } from 'react'
-const Mine = memo(function index() {
+const Player = memo(function index() {
   return (
     <div>
 
     </div>
   )
 })
-export default Mine 
+
+
+export default Player
