@@ -26,10 +26,10 @@ export const routes = [
       },
     ]
   }, {
-    path: '/friend',
-    component: Friend
-  }, {
     path: '/mine',
     component: Mine
+  }, {
+    path: '/friend',
+    component: Friend
   }
 ]

@@ -55,6 +55,7 @@ select,
 a {
   outline: none;
   border: none;
+  text-decoration: none;
 }
 
 table {
