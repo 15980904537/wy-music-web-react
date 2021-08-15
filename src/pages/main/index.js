@@ -4,7 +4,9 @@ import {renderRoutes } from 'react-router-config'
 import AppHeader from '@/components/app-header'
 import AppFooter from '@/components/app-footer'
 import { routes} from '@/route'
-const Main = memo(function Main() {
+const Main = memo(function Main(props) {
+  console.log(routes);
+  // const { routes} = props;
   return (
     <HashRouter>
       <AppHeader />
