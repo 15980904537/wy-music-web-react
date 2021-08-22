@@ -10,7 +10,7 @@ export function getTopBanner() {
 //热门推荐
 export function getHotRecommend() {
   return request({
-    url: "/personalized"
+    url: "/personalized",
   })
 }
 //新喋上架

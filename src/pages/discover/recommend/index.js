@@ -1,23 +1,15 @@
 import React, { memo, useEffect } from 'react'
 // import useSelection from 'antd/lib/table/hooks/useSelection'
-import { useDispatch, useSelector, shallowEqual, connect } from 'react-redux'
-import { getBanner } from './store/action'
 
-export default memo(function Recommend(props) {
-  const state = useSelector((state) => {
-    return {
-      banner: state.recommendReducer.get('topBanner')
-    }
-  }, shallowEqual);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getBanner())
-  },[dispatch])
-  console.log(state)
+import TopBanner from './c-com/top-banner/index'
+import { RecommendWrapper } from './style'
+export default memo(function Recommend() {
+  
   return (
-    <div style={{ height: '30px' }}>
-      {'推荐'}
-    </div>
+    <RecommendWrapper>
+      <TopBanner>
+      </TopBanner>
+    </RecommendWrapper>
   )
 })
 // const mapStateToProps = function mapStateToProps(state) { 
