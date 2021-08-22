@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const require = function require(option) { 
+export const request = function request(option) { 
   return new Promise((resolve,reject) => { 
     const instance = axios.create({
       baseURL: 'http://123.207.32.32:9001/',

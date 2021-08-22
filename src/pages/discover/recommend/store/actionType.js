@@ -1,0 +1,13 @@
+export const CHANGE_TOP_BANNER = Symbol('CHANGE_TOP_BANNER');
+export const CHANGE_HOT_RECOMMEND = Symbol('CHANGE_HOT_RECOMMEND');
+export const CHANGE_NEW_ALBUM = Symbol('CHANGE_NEW_ALBUM');
+export const CHANGE_TOP_LIST = Symbol('CHANGE_TOP_LIST');
+export const CHANGE_ARTIST_LIST = Symbol('CHANGE_ARTIST_LIST')
+
+
+export const CHANGE_PUT_TOP_BANNER = Symbol('CHANGE_PUT_TOP_BANNER');
+export const CHANGE_PUT_HOT_RECOMMEND = Symbol('CHANGE_PUT_HOT_RECOMMEND');
+export const CHANGE_PUT_NEW_ALBUM = Symbol('CHANGE_PUT_NEW_ALBUM');
+export const CHANGE_PUT_TOP_LIST = Symbol('CHANGE_PUT_TOP_LIST');
+export const CHANGE_PUT_ARTIST_LIST = Symbol('CHANGE_PUT_ARTIST_LIST')
+export const PUT_LOADING = Symbol('PUT_LOADING')
