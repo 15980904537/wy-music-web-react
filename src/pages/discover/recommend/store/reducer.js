@@ -12,7 +12,8 @@ const initialState = Map({
   topList: [],
   loading:true
 })
-export const recommendReducer = function recommendReducer(state = initialState, action) { 
+export const recommendReducer = function recommendReducer(state = initialState, action) {
+  console.log(action.payload)
   switch (action.type) { 
     case PUT_LOADING:
       return state.set('loading',action.payload)

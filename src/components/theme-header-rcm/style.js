@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ThemeHeaderWrapper = styled.div`
-  width:730px;
   height:33px;
   border-bottom:2px solid #C10D0C;
   padding:0px 10px 4px 34px;

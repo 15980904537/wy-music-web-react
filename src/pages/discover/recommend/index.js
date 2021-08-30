@@ -1,9 +1,9 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo} from 'react'
 // import useSelection from 'antd/lib/table/hooks/useSelection'
 
 import TopBanner from './c-com/top-banner/index'
 import HotRecommend from './c-com/hot-recommend/index'
-import { RecommendWrapper ,Content} from './style'
+import { RecommendWrapper, Content, RecommendLeft} from './style'
 export default memo(function Recommend() {
   
   return (
@@ -11,7 +11,9 @@ export default memo(function Recommend() {
       <TopBanner>
       </TopBanner>
       <Content className="wrap-v2">
-        <HotRecommend></HotRecommend >
+        <RecommendLeft>
+          <HotRecommend />
+        </RecommendLeft>
       </Content>
     </RecommendWrapper>
   )
