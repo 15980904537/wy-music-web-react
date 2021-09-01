@@ -15,7 +15,7 @@ export function getHotRecommend() {
 }
 //新喋上架
 
-export function getNewAlbum(limit, offset) {
+export function getNewAlbum(limit,offset) {
   return request({
     url: "/top/album",
     params: {

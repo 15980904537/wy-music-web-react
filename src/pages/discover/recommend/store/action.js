@@ -14,10 +14,10 @@ export const getRecommend = () => {
   }
 }
 
-export const getAlbum = () => { 
+export const getAlbum = (limit) => { 
   return {
     type: CHANGE_NEW_ALBUM,
-    payload:null
+    payload:limit
   }
 }
 

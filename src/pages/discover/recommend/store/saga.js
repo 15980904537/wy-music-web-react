@@ -34,10 +34,11 @@ function* initHotRecommend() {
   yield put({ type: CHANGE_PUT_HOT_RECOMMEND, payload:data.result })
 }
 
-function* initNewAlbum() {
+function* initNewAlbum(params) {
+  console.log(params.payload)
   yield put({ type: PUT_LOADING, payload: false });
   //发送请求
-  const data = yield call(getNewAlbum);
+  const data = yield call(getNewAlbum,params.payload,0);
   yield put({ type: PUT_LOADING, payload: true });
   yield put({ type: CHANGE_PUT_NEW_ALBUM, payload:data.albums })
 }

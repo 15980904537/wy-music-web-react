@@ -3,6 +3,7 @@ import React, { memo} from 'react'
 
 import TopBanner from './c-com/top-banner/index'
 import HotRecommend from './c-com/hot-recommend/index'
+import NewAlbum from './c-com/new-album/index'
 import { RecommendWrapper, Content, RecommendLeft} from './style'
 export default memo(function Recommend() {
   
@@ -13,6 +14,7 @@ export default memo(function Recommend() {
       <Content className="wrap-v2">
         <RecommendLeft>
           <HotRecommend />
+          <NewAlbum/>
         </RecommendLeft>
       </Content>
     </RecommendWrapper>

@@ -29,7 +29,6 @@ export default memo(function TopBanner() {
     [],
   ) 
   const bgImage = state.banner[currentIndex] && (state.banner[currentIndex].imageUrl + "?imageView&blur=40x20");
-  // console.log(state.banner[currentIndex].imageUrl)
   return (
     <BannerWrapper bgImage={bgImage}>
       <div className="banner wrap-v2">
