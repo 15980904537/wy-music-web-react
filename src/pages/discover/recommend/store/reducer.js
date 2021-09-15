@@ -1,7 +1,8 @@
 import {
   PUT_LOADING, CHANGE_PUT_TOP_BANNER,
   CHANGE_PUT_HOT_RECOMMEND, CHANGE_PUT_NEW_ALBUM,
-  CHANGE_PUT_ARTIST_LIST,CHANGE_PUT_TOP_LIST
+  CHANGE_PUT_ARTIST_LIST,CHANGE_PUT_NEW_LIST,CHANGE_PUT_ORIGINAL_LIST,
+  CHANGE_PUT_UP_LIST
 } from './actionType'
 import { Map} from 'immutable'
 const initialState = Map({
@@ -9,11 +10,12 @@ const initialState = Map({
   hotRecommend: [],
   newAlbum: [],
   artistList: [],
-  topList: [],
+  newList: {},
+  originList:{},
+  upList:{},
   loading:true
 })
 export const recommendReducer = function recommendReducer(state = initialState, action) {
-  console.log(action.payload)
   switch (action.type) { 
     case PUT_LOADING:
       return state.set('loading',action.payload)
@@ -26,8 +28,15 @@ export const recommendReducer = function recommendReducer(state = initialState, 
     
     case CHANGE_PUT_ARTIST_LIST:
       return state.set('artistList',action.payload)
-    case CHANGE_PUT_TOP_LIST:
-      return state.set('topList',action.payload)
+    case CHANGE_PUT_NEW_LIST:
+        console.log(action.payload)
+      return state.set('newList',action.payload)
+    case CHANGE_PUT_ORIGINAL_LIST:
+        console.log(action.payload)
+      return state.set('newList',action.payload)
+    case CHANGE_PUT_UP_LIST:
+        console.log(action.payload)
+      return state.set('newList',action.payload)
     default:
       return state
   }

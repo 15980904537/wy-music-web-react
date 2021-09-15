@@ -7,9 +7,11 @@ import {
   PUT_LOADING,
   CHANGE_PUT_TOP_BANNER,
   CHANGE_PUT_HOT_RECOMMEND,
-  CHANGE_PUT_TOP_LIST,
+  CHANGE_PUT_NEW_LIST,
   CHANGE_PUT_NEW_ALBUM,
-  CHANGE_PUT_ARTIST_LIST
+  CHANGE_PUT_ARTIST_LIST,
+  CHANGE_PUT_ORIGINAL_LIST,
+  CHANGE_PUT_UP_LIST
 } from './actionType';
 // import { takeEvery} from 'redux-saga'
 import { put,call,takeEvery} from 'redux-saga/effects'
@@ -43,12 +45,26 @@ function* initNewAlbum(params) {
   yield put({ type: CHANGE_PUT_NEW_ALBUM, payload:data.albums })
 }
 
-function* initTopList() {
+function* initTopList(params) {
   yield put({ type: PUT_LOADING, payload: false });
+  console.log(params.payload)
   //发送请求
-  const data = yield call(getTopList);
+  const data = yield call(getTopList,params.payload);
+  console.log(data)
   yield put({ type: PUT_LOADING, payload: true });
-  yield put({ type: CHANGE_PUT_TOP_LIST, payload:data.paylist })
+  switch (params.payload) {
+      case 0:
+          yield put({ type: CHANGE_PUT_NEW_LIST, payload:data.playlist })
+          break;
+      case 2:
+          yield put({ type: CHANGE_PUT_ORIGINAL_LIST, payload:data.playlist })
+          break;
+      case 3:
+          yield put({ type: CHANGE_PUT_UP_LIST, payload:data.playlist })
+          break;
+      default:
+          break;
+  }
 }
 
 function* initArtistList() {

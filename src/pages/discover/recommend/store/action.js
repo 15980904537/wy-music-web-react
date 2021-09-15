@@ -21,10 +21,10 @@ export const getAlbum = (limit) => {
   }
 }
 
-export const getList = () => { 
+export const getList = (num) => { 
   return {
     type: CHANGE_TOP_LIST,
-    payload: null
+    payload: num
   }
 }
 

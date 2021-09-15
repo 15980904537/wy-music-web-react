@@ -3,7 +3,7 @@ import { HotRecommendWrapper } from './style'
 import ThemeHeaderRcm from '@/components/theme-header-rcm/index'
 import { useSelector, shallowEqual, useDispatch } from 'react-redux'
 import { getRecommend} from '../../store/action'
-import ThemeCover from '../../../../../components/theme-cover'
+import ThemeCover from '../../../../../components/song-cover'
 export default memo(function HotRecommend() {
   const state = useSelector((state) => {
     return {

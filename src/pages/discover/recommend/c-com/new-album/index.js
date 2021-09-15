@@ -19,7 +19,6 @@ export default memo(function NewAlbum() {
   useEffect(() => {
     dispatch(getAlbum(type.ALBUM_MAX_LIMIT));
   }, [dispatch])
-  console.log(newAlbum)
   return (
     <AlbumWrapper>
       <ThemeHeaderRcm title='新碟上架'></ThemeHeaderRcm>

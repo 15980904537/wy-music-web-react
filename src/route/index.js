@@ -11,7 +11,6 @@ const Songs = React.lazy(() => import('../pages/discover/songs'))
 const Djradio = React.lazy(() => import('../pages/discover/djradio'))
 const Artist = React.lazy(() => import('../pages/discover/artist'))
 const Album = React.lazy(() => import('../pages/discover/album'))
-console.log(Friend)
 export const routes = [
   {
     path: '/',
