@@ -20,7 +20,7 @@ export default memo(function ThemeCover(props) {
         {info.name}
       </div>
       <div className='cover-source'>
-        by {info.copywriter || info.creator.nickname}
+        by {info.copywriter || (info.creato&&info.creator.nickname)}
       </div>
     </ThemeCoverWrapper>
   )
