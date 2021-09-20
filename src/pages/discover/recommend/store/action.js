@@ -1,4 +1,11 @@
-import { CHANGE_TOP_BANNER, CHANGE_HOT_RECOMMEND, CHANGE_NEW_ALBUM, CHANGE_TOP_LIST, CHANGE_ARTIST_LIST } from './actionType';
+import { 
+    CHANGE_TOP_BANNER, 
+    CHANGE_HOT_RECOMMEND, 
+    CHANGE_NEW_ALBUM, 
+    CHANGE_TOP_LIST, 
+    CHANGE_ARTIST_LIST,
+    CHANGE_SETTLE_SINGER
+ } from './actionType';
 
 export const getBanner = () => { 
   return {
@@ -28,9 +35,9 @@ export const getList = (num) => {
   }
 }
 
-export const getArtist = () => { 
+export const getArtist = (limit) => { 
   return {
     type: CHANGE_ARTIST_LIST,
-    payload: null
+    payload: limit
   }
 }

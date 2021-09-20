@@ -6,6 +6,7 @@ import HotRecommend from './c-com/hot-recommend/index'
 import NewAlbum from './c-com/new-album/index'
 import RankingList from './c-com/ranking-list/index'
 import UserLogin from './c-com/user-login/index'
+import SettleSinger from './c-com/settle-singer/index'
 
 import { RecommendWrapper, Content, RecommendLeft,RecommendRight} from './style'
 export default memo(function Recommend() {
@@ -22,7 +23,7 @@ export default memo(function Recommend() {
         </RecommendLeft>
         <RecommendRight>
           <UserLogin />
-          
+          <SettleSinger />
         </RecommendRight>
       </Content>
     </RecommendWrapper>
