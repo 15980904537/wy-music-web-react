@@ -3,6 +3,7 @@ import { HashRouter } from 'react-router-dom'
 import {renderRoutes } from 'react-router-config'
 import AppHeader from '@/components/app-header'
 import AppFooter from '@/components/app-footer'
+import AppPlayerBar from '@/pages/player/app-player-bar'
 import { routes} from '@/route'
 const Main = memo(function Main(props) {
   console.log(routes);
@@ -14,6 +15,7 @@ const Main = memo(function Main(props) {
         {renderRoutes(routes)}
       </Suspense>
       <AppFooter />
+      <AppPlayerBar />
     </HashRouter>
   )
 })
